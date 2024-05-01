@@ -5,9 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEETCODE | Merge Strings Alternately</title>
 </head>
-<body>
+<body style="position:relative;">
+    <img src="completed.png" style="position:absolute;right:0;top:0;">
     <h1>LEETCODE</h1>
     <h2>Merge Strings Alternately</h2>
     <img src="screenshot.jpg"><br><br>
+
+    <script>
+        var mergeAlternately = function(word1, word2) {
+            let outputArray = []
+            let array1 = Array.from(word1)
+            let array2 = Array.from(word2)
+            document.write(array1+'<br>')
+            document.write(array2+'<br>')
+            const length = array1.length>array2.length?array1.length:array2.length
+            for (let i=0;i<length;i++){
+                if (array1[i]) outputArray.push(array1[i])
+                if (array2[i]) outputArray.push(array2[i])
+            }
+            let output = outputArray.join('')
+
+            document.write('Output: '+outputArray+'<br>')
+            document.write('Output: '+output+'<br>')
+            return output
+        }
+        let test1 = 'abc'
+        let test2 = 'uvwxyz'
+        mergeAlternately(test1,test2)
+    </script>
+
 </body>
 </html>
